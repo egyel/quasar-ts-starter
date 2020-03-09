@@ -54,6 +54,9 @@ module.exports = function (ctx) {
     // https://quasar.dev/quasar-cli/cli-documentation/supporting-ie
     supportIE: true,
 
+    // https://quasar.dev/quasar-cli/cli-documentation/supporting-ts#Installation-of-TypeScript-Support
+    supportTS: true,
+
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
       vueRouterMode: 'hash', // available values: 'hash', 'history'
