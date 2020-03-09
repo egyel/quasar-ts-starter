@@ -1,19 +1,23 @@
 {
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
+
   "files.encoding": "utf8",
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "files.exclude": {
-      "**/.git": true,
-      "**/.gitattributes": true,
-      "**/.gitignore": true,
-      "**/.svn": true,
-      "**/.DS_Store": true,
-      "**/.editorconfig": true,
-      "**/.vscode": true,
-      "**/node_modules": true,
-      "**/.quasar": true
-  }
+    "**/.git": true,
+    "**/.gitattributes": true,
+    "**/.gitignore": true,
+    "**/.svn": true,
+    "**/.DS_Store": true,
+    "**/.editorconfig": true,
+    "**/.vscode": true,
+    "**/node_modules": true,
+    "**/.quasar": true
+  },
+
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatter.js": "vscode-typescript"
 }
