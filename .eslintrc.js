@@ -3,7 +3,12 @@ module.exports = {
 
   parserOptions: {
     parser: 'babel-eslint',
-    sourceType: 'module'
+    sourceType: 'module',
+    // solves the "Using the export keyword between a decorator"
+    // See: https://github.com/babel/babel-eslint/issues/662#issuecomment-416573364
+    ecmaFeatures: {
+      legacyDecorators: true
+    }
   },
 
   env: {

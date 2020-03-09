@@ -22,8 +22,10 @@
 </template>
 
 <script lang="ts">
-export default {
-  name: 'EssentialLink',
+import Vue from 'vue';
+import Component from 'vue-class-component';
+
+const EssentialLinkProps = Vue.extend({
   props: {
     title: {
       type: String,
@@ -45,5 +47,9 @@ export default {
       default: '',
     },
   },
-};
+});
+
+@Component
+export default class EssentialLink extends EssentialLinkProps {
+}
 </script>
