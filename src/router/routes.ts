@@ -1,3 +1,4 @@
+import { RouteConfig } from 'vue-router';
 
 const routes = [
   {
@@ -7,7 +8,7 @@ const routes = [
       { path: '', component: () => import('pages/Index.vue') },
     ],
   },
-];
+] as RouteConfig[];
 
 // Always leave this as last one
 if (process.env.MODE !== 'ssr') {

@@ -47,7 +47,7 @@
 </template>
 
 <script lang="ts">
-import EssentialLink from 'components/EssentialLink';
+import EssentialLink from 'components/EssentialLink.vue';
 
 export default {
   name: 'MainLayout',
