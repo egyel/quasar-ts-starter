@@ -24,32 +24,16 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
-
-const EssentialLinkProps = Vue.extend({
-  props: {
-    title: {
-      type: String,
-      required: true,
-    },
-
-    caption: {
-      type: String,
-      default: '',
-    },
-
-    link: {
-      type: String,
-      default: '#',
-    },
-
-    icon: {
-      type: String,
-      default: '',
-    },
-  },
-});
+import { Prop } from 'vue-property-decorator';
 
 @Component
-export default class EssentialLink extends EssentialLinkProps {
+export default class EssentialLink extends Vue {
+  @Prop({ required: true }) title: string
+
+  @Prop({ default: '' }) caption: string
+
+  @Prop({ default: '#' }) link: string
+
+  @Prop({ default: '' }) icon: string
 }
 </script>
