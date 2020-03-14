@@ -28,12 +28,9 @@ import { Prop } from 'vue-property-decorator';
 
 @Component
 export default class EssentialLink extends Vue {
-  @Prop({ required: true }) title: string
-
-  @Prop({ default: '' }) caption: string
-
-  @Prop({ default: '#' }) link: string
-
-  @Prop({ default: '' }) icon: string
+  @Prop({ required: true }) readonly title!: string
+  @Prop({ default: '' }) readonly caption!: string
+  @Prop({ default: '#' }) readonly link!: string
+  @Prop({ default: '' }) readonly icon!: string
 }
 </script>
