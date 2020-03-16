@@ -55,7 +55,11 @@ module.exports = function (ctx) {
     supportIE: true,
 
     // https://quasar.dev/quasar-cli/cli-documentation/supporting-ts#Installation-of-TypeScript-Support
-    supportTS: true,
+    supportTS: {
+      tsCheckerConfig: {
+        eslint: true,
+      },
+    },
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
@@ -74,7 +78,7 @@ module.exports = function (ctx) {
       extendWebpack(cfg) {
         cfg.module.rules.push({
           enforce: 'pre',
-          test: /\.(js|vue)$/,
+          test: /\.(ts|js|vue)$/,
           loader: 'eslint-loader',
           exclude: /node_modules/,
           options: {

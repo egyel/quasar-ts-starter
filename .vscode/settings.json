@@ -18,6 +18,12 @@
     "**/.quasar": true
   },
 
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.packageManager": "yarn",
+  "eslint.validate": ["vue","html","javascript","typescript","javascriptreact","typescriptreact"],
+
   "vetur.format.defaultFormatter.html": "js-beautify-html",
   "vetur.format.defaultFormatter.js": "vscode-typescript"
 }
