@@ -8,7 +8,7 @@
   "author": "Egyel",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .ts,.js,.vue src",
+    "lint": "tsc --noEmit && eslint --ext .ts,.js,.vue src",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {

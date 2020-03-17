@@ -38,3 +38,9 @@ See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
 ? Pick an ESLint preset: Airbnb
 ? Cordova/Capacitor id (disregard if not building mobile apps) org.cordova.quasar.app
 ? Should we run `npm install` for you after the project has been created? (recommended) yarn
+
+### TODO
+- preventing ESLint and formatting errors from being committed: [lint-staged](https://github.com/okonet/lint-staged) + [husky](https://github.com/typicode/husky)
+
+### Misc
+- [Using ESLint and Prettier in a TypeScript Project](https://www.robertcooper.me/using-eslint-and-prettier-in-a-typescript-project)
