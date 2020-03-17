@@ -43,4 +43,16 @@ See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
 - preventing ESLint and formatting errors from being committed: [lint-staged](https://github.com/okonet/lint-staged) + [husky](https://github.com/typicode/husky)
 
 ### Misc
+- Quasar docs: [Support TypeScript](https://quasar.dev/quasar-cli/cli-documentation/supporting-ts#Installation-of-TypeScript-Support), [Configure VS Code](https://quasar.dev/start/vs-code-configuration#Recommended-additional-VS-Code-extensions-and-settings-updates)
+- decorators:
+  - [component](https://class-component.vuejs.org/)
+  - [property](https://github.com/kaorun343/vue-property-decorator)
+  - [summery doc](https://blog.logrocket.com/how-to-write-a-vue-js-app-completely-in-typescript/)
+- TypeScript [linting](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md)
 - [Using ESLint and Prettier in a TypeScript Project](https://www.robertcooper.me/using-eslint-and-prettier-in-a-typescript-project)
+- useing Prettier:
+  - [vuejs](https://github.com/vuejs/eslint-config-typescript), [repo](https://github.com/vuejs/eslint-config-prettier)
+  - [config](https://prettier.io/docs/en/configuration.html)
+- similar projecs:
+  - [article](https://dev.to/xkonti/creating-quasar-framework-project-with-typescript-support-51ge) + [github](https://github.com/Xkonti/quasar-clean-typescript)
+  - [quasar extention](https://github.com/quasarframework/app-extension-typescript)
