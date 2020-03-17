@@ -57,7 +57,7 @@ import EssentialLink from 'components/EssentialLink.vue';
   },
 })
 export default class MainLayout extends Vue {
-  leftDrawerOpen = false
+  leftDrawerOpen = false;
 
   essentialLinks = [
     {
@@ -96,6 +96,6 @@ export default class MainLayout extends Vue {
       icon: 'public',
       link: 'https://facebook.quasar.dev',
     },
-  ]
+  ];
 }
 </script>

@@ -55,6 +55,9 @@ module.exports = function (ctx) {
     supportIE: true,
 
     // https://quasar.dev/quasar-cli/cli-documentation/supporting-ts#Installation-of-TypeScript-Support
+    // support typescript
+    // supportTS: true,
+    // lint before run:
     supportTS: {
       tsCheckerConfig: {
         eslint: true,

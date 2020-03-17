@@ -14,6 +14,7 @@ const i18n = new VueI18n({
 // @ts-ignore
 export default ({ app }) => {
   // Set i18n instance on app
+  // eslint-disable-next-line no-param-reassign
   app.i18n = i18n;
 };
 

@@ -32,6 +32,13 @@ module.exports = {
     //'plugin:@typescript-eslint/recommended-requiring-type-checking'
   ],
 
+  settings: {
+    'import/resolver':{
+      typescript: {}
+    }
+    //'import/extensions':['.vue']
+  },
+
   parserOptions: {
     // parser: '@typescript-eslint/parser', // note: it is included in "@vue/typescript[/recommended]"
     sourceType: 'module',
