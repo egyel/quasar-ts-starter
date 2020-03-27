@@ -1,2 +1,2 @@
-export function someAction(/* context */) {
+export default function someAction(/* context */) {
 }
