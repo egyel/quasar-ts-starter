@@ -1,3 +1,4 @@
+
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
@@ -47,6 +48,7 @@
 </template>
 
 <script lang="ts">
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import EssentialLink from 'components/EssentialLink.vue';
@@ -58,6 +60,16 @@ import EssentialLink from 'components/EssentialLink.vue';
 })
 export default class MainLayout extends Vue {
   leftDrawerOpen = false;
+
+  preFetch() {
+    console.log('PREFETCH', this.leftDrawerOpen);
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  beforeRouteEnter(to: any, from: any, next: any) {
+    console.log('beforeRouteEnter');
+    next();
+  }
 
   essentialLinks = [
     {
