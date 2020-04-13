@@ -1,3 +1,5 @@
+const path = require('path')
+
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
 
@@ -79,6 +81,12 @@ module.exports = function (ctx) {
 
       // https://quasar.dev/quasar-cli/cli-documentation/handling-webpack
       extendWebpack(cfg) {
+        cfg.resolve.alias = {
+          ...cfg.resolve.alias, // This adds the existing alias
+
+          // Add custom paths here
+          store: path.resolve(__dirname, './src/store'),
+        };
         cfg.module.rules.push({
           enforce: 'pre',
           test: /\.(ts|js|vue)$/,
