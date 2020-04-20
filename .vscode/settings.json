@@ -24,6 +24,14 @@
   "eslint.packageManager": "yarn",
   "eslint.validate": ["vue","html","javascript","typescript","javascriptreact","typescriptreact"],
 
+  // use the the TypeScript version required by this project instead of the one installed globally with VSCode
+  // https://code.visualstudio.com/docs/typescript/typescript-compiling#_using-newer-typescript-versions
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  // https://eslint.vuejs.org/user-guide/#editor-integrations
+  "vetur.validation.template": false,
+
   "vetur.format.defaultFormatter.html": "js-beautify-html",
-  "vetur.format.defaultFormatter.js": "vscode-typescript"
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.experimental.templateInterpolationService": true
 }

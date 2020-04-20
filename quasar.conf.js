@@ -58,13 +58,13 @@ module.exports = function (ctx) {
 
     // https://quasar.dev/quasar-cli/cli-documentation/supporting-ts#Installation-of-TypeScript-Support
     // support typescript
-    // supportTS: true,
-    // lint before run:
-    supportTS: {
-      tsCheckerConfig: {
-        eslint: true,
-      },
-    },
+    supportTS: true,
+    // lint before run (adds overhead, better to run 'yarn lint' instead):
+    // supportTS: {
+    //   tsCheckerConfig: {
+    //     eslint: true,
+    //   },
+    // },
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
