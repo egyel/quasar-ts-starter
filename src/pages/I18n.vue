@@ -69,10 +69,8 @@ export default class I18n extends Vue {
     import(/* webpackInclude: /(de|en-us)\.js$/ */ `quasar/lang/${lang}`).then(
       (l) => { this.$q.lang.set(l.default); },
     );
-    // import(/* webpackInclude: /(de|en-us)\.js$/ */ `app/src/i18n/${lang}`).then(
-    //   (l) => { this.$i18n.locale = l; },
-    // );
     this.$i18n.locale = lang;
+    this.$q.cookies.set('lang', lang);
   }
 }
 </script>

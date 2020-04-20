@@ -10,6 +10,7 @@ module.exports = function (ctx) {
     // https://quasar.dev/quasar-cli/cli-documentation/boot-files
     boot: [
       'i18n',
+      'lang-pack',
       'axios',
     ],
 
@@ -50,7 +51,9 @@ module.exports = function (ctx) {
       directives: [],
 
       // Quasar plugins
-      plugins: [],
+      plugins: [
+        'Cookies',
+      ],
     },
 
     // https://quasar.dev/quasar-cli/cli-documentation/supporting-ie

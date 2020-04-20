@@ -30,7 +30,7 @@
           header
           class="text-grey-8"
         >
-          Kitchen sinks
+          Playgrounds
         </q-item-label>
         <q-item to="/i18n">
           <q-item-section avatar>
