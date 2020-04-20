@@ -30,6 +30,21 @@
           header
           class="text-grey-8"
         >
+          Kitchen sinks
+        </q-item-label>
+        <q-item to="/i18n">
+          <q-item-section avatar>
+            <q-icon name="chat" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>i18n</q-item-label>
+          </q-item-section>
+        </q-item>
+
+        <q-item-label
+          header
+          class="text-grey-8"
+        >
           Essential Links
         </q-item-label>
         <EssentialLink

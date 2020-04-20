@@ -2,6 +2,7 @@ import Vue from 'vue';
 import { boot } from 'quasar/wrappers';
 import VueI18n from 'vue-i18n';
 import messages from 'src/i18n';
+import dateTimeFormats from 'src/i18n/dateTimeFormats';
 
 declare module 'vue/types/vue' {
   interface Vue {
@@ -14,6 +15,7 @@ Vue.use(VueI18n);
 const i18n = new VueI18n({
   locale: 'en-us',
   fallbackLocale: 'en-us',
+  dateTimeFormats,
   messages,
 });
 

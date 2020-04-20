@@ -8,6 +8,13 @@ const routes: RouteConfig[] = [
       { path: '', component: () => import('pages/Index.vue') },
     ],
   },
+  {
+    path: '/i18n',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/I18n.vue') },
+    ],
+  },
 ];
 
 // Always leave this as last one
