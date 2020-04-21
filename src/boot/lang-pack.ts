@@ -1,6 +1,7 @@
+import { boot } from 'quasar/wrappers';
 import Quasar, { Cookies } from 'quasar';
 
-export default async () => {
+export default boot(async () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const q = (Quasar as any);
   let langIso: string = q.lang.getLocale();
@@ -18,4 +19,4 @@ export default async () => {
   } catch (err) {
     console.error('Requested Quasar Language Pack does not exist');
   }
-};
+});

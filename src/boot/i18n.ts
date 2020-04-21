@@ -3,6 +3,7 @@ import { boot } from 'quasar/wrappers';
 import VueI18n from 'vue-i18n';
 import messages from 'src/i18n';
 import dateTimeFormats from 'src/i18n/dateTimeFormats';
+import Quasar, { Cookies } from 'quasar';
 
 declare module 'vue/types/vue' {
   interface Vue {
@@ -12,8 +13,17 @@ declare module 'vue/types/vue' {
 
 Vue.use(VueI18n);
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let langIso: string = (Quasar as any).lang.getLocale();
+
+if (!Cookies.has('lang')) {
+  Cookies.set('lang', langIso);
+} else {
+  langIso = Cookies.get('lang');
+}
+
 const i18n = new VueI18n({
-  locale: 'en-us',
+  locale: langIso,
   fallbackLocale: 'en-us',
   dateTimeFormats,
   messages,
