@@ -22,6 +22,12 @@ module.exports = {
     // 'plugin:vue/strongly-recommended', // Priority B: Strongly Recommended (Improving Readability)
     // 'plugin:vue/recommended', // Priority C: Recommended (Minimizing Arbitrary Choices and Cognitive Overhead)
 
+    // App internationalization
+    // only checks the .vue files and does not handle js/ts modules
+    // good for discovering raw text
+    // See https://eslint-plugin-vue-i18n.intlify.dev/started.html#installation
+    'plugin:vue-i18n/recommended',
+
     // TypeScript parser options, uncomment one out of two
     // See https://github.com/vuejs/eslint-config-typescript
     // 'eslint:recommended', '@vue/typescript'  // Base configuration for Vue-TypeScript projects
@@ -36,6 +42,9 @@ module.exports = {
   settings: {
     'import/resolver':{
       typescript: {}
+    },
+    'vue-i18n': {
+      localeDir: './src/i18n/*.json'
     }
     //'import/extensions':['.vue']
   },
@@ -71,6 +80,11 @@ module.exports = {
 
   // add your custom rules here
   rules: {
+    // allow raw text
+    'vue-i18n/no-raw-text': 'off',
+    // Some more strict i18n rules
+    // 'vue-i18n/no-unused-keys': ['error', {extensions: ['.js','.ts','.vue']}],
+    // 'vue-i18n/no-missing-keys': 'error',
 
     // allow console.log during development only
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',

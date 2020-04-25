@@ -40,6 +40,7 @@
     <div>
       <a href="https://kazupon.github.io/vue-i18n/guide/fallback.html" target="_blank">
         Fallback localization
+      <!-- eslint-disable-next-line vue-i18n/no-missing-keys -->
       </a>: {{ $t('success') }}
     </div>
   </q-page>

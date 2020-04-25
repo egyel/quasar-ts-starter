@@ -41,12 +41,16 @@ See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
 
 
 ## App internationalization (i18n)
-Note: The used tools below are require/preffer to use json files.
+**Note:** The used tools below are required/prefer to use json files.
 
 ### [vue-i18n-extact](https://pixari.github.io/vue-i18n-extract/how-to-use.html#getting-started)
 This library analyses your Vue.js source code looking for any vue-i18n key usage, in order to:
 - extract and report all the missing and unused keys in the language files (`yarn i18n`);
 - optionnaly write every missing keys into every language files (`yarn i18n:extract`);
+
+### [eslint-plugin-vue-i18n](https://eslint-plugin-vue-i18n.intlify.dev/started.html)
+eslint-plugin-vue-i18n is ESLint plugin of Vue I18n. It easily integrates some localization features to your Vue.js Application. (`yarn lint`)
+**Note:** The "'vue-i18n/no-raw-text': 'off'," line in .eslintrc.js should be removed in your repo!
 
 
 ## TODO
