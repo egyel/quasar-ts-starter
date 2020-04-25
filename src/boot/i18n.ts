@@ -29,10 +29,19 @@ const i18n = new VueI18n({
   messages,
 });
 
-export default boot(({ app }) => {
+export default boot(async ({ app }) => {
   // Set i18n instance on app
   // eslint-disable-next-line no-param-reassign
   app.i18n = i18n;
+
+  try {
+    await import(/* webpackInclude: /(de|en-us)\.js$/ */ `quasar/lang/${langIso}`).then(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (l) => { (Quasar as any).lang.set(l.default); },
+    );
+  } catch (err) {
+    console.error('Requested Quasar Language Pack does not exist');
+  }
 });
 
 export { i18n };
