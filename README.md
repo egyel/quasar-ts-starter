@@ -39,10 +39,21 @@ See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
 ? Cordova/Capacitor id (disregard if not building mobile apps) org.cordova.quasar.app
 ? Should we run `npm install` for you after the project has been created? (recommended) yarn
 
-### TODO
+
+## App internationalization (i18n)
+Note: The used tools below are require/preffer to use json files.
+
+### [vue-i18n-extact](https://pixari.github.io/vue-i18n-extract/how-to-use.html#getting-started)
+This library analyses your Vue.js source code looking for any vue-i18n key usage, in order to:
+- extract and report all the missing and unused keys in the language files (`yarn i18n`);
+- optionnaly write every missing keys into every language files (`yarn i18n:extract`);
+
+
+## TODO
 - preventing ESLint and formatting errors from being committed: [lint-staged](https://github.com/okonet/lint-staged) + [husky](https://github.com/typicode/husky)
 
-### Misc
+
+## Misc
 - Quasar docs: [Support TypeScript](https://quasar.dev/quasar-cli/cli-documentation/supporting-ts#Installation-of-TypeScript-Support), [Configure VS Code](https://quasar.dev/start/vs-code-configuration#Recommended-additional-VS-Code-extensions-and-settings-updates)
 - decorators:
   - [component](https://class-component.vuejs.org/)

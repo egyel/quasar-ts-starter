@@ -2,7 +2,7 @@ import Vue from 'vue';
 import { boot } from 'quasar/wrappers';
 import VueI18n from 'vue-i18n';
 import messages from 'src/i18n';
-import dateTimeFormats from 'src/i18n/dateTimeFormats';
+import dateTimeFormats from 'src/i18n/formats';
 import Quasar, { Cookies } from 'quasar';
 
 declare module 'vue/types/vue' {
