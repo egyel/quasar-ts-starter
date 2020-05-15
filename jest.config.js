@@ -1,7 +1,7 @@
 /* eslint-env node */
 module.exports = {
   globals: {
-    __DEV__: true
+    __DEV__: true,
   },
   setupFilesAfterEnv: ['<rootDir>/test/jest/jest.setup.ts'],
   // noStackTrace: true,
@@ -16,7 +16,7 @@ module.exports = {
     '<rootDir>/src/**/*.js',
     '<rootDir>/src/**/*.ts',
     '<rootDir>/src/**/*.jsx',
-    '<rootDir>/src/**/*.tsx'
+    '<rootDir>/src/**/*.tsx',
   ],
   coverageThreshold: {
     global: {
@@ -24,13 +24,13 @@ module.exports = {
       //  functions: 50,
       //  lines: 50,
       //  statements: 50
-    }
+    },
   },
   testMatch: [
     // Matches tests in any subfolder of 'src' or into 'test/jest/__tests__'
     // Matches all files with extension 'js', 'jsx', 'ts' and 'tsx'
     '<rootDir>/test/jest/__tests__/**/*.(spec|test).+(ts|js)?(x)',
-    '<rootDir>/src/**/__tests__/*_jest.(spec|test).+(ts|js)?(x)'
+    '<rootDir>/src/**/__tests__/*_jest.(spec|test).+(ts|js)?(x)',
   ],
   // Extension-less imports of components are resolved to .ts files by TS,
   //  grating correct type-checking in test files.
@@ -38,13 +38,13 @@ module.exports = {
   //  will be resolved to .vue files by Jest, if both .vue and .ts files are
   //  in the same folder.
   // This guarantee a great dev experience both for testing and type-checking.
-  // See https://github.com/vuejs/vue-jest/issues/188#issuecomment-620750728  
+  // See https://github.com/vuejs/vue-jest/issues/188#issuecomment-620750728
   moduleFileExtensions: ['vue', 'js', 'jsx', 'json', 'ts', 'tsx'],
   moduleNameMapper: {
     '^quasar$': '<rootDir>/node_modules/quasar/dist/quasar.common.js',
     '^~/(.*)$': '<rootDir>/$1',
     '^src/(.*)$': '<rootDir>/src/$1',
-    '.*css$': '<rootDir>/test/jest/utils/stub.css'
+    '.*css$': '<rootDir>/test/jest/utils/stub.css',
   },
   transform: {
     '^.+\\.(ts|js|html)$': 'ts-jest',
@@ -54,8 +54,8 @@ module.exports = {
     // https://github.com/tleunen/find-babel-config/issues/33
     '.*\\.vue$': 'vue-jest',
     '.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$':
-      'jest-transform-stub'
+      'jest-transform-stub',
   },
   transformIgnorePatterns: ['<rootDir>/node_modules/(?!quasar/lang)'],
-  snapshotSerializers: ['<rootDir>/node_modules/jest-serializer-vue']
+  snapshotSerializers: ['<rootDir>/node_modules/jest-serializer-vue'],
 };

@@ -10,9 +10,9 @@ const { Quasar, date } = All;
 
 function isComponent(value: unknown): value is VueConstructor {
   return (
-    value &&
-    (value as VueConstructor).component &&
-    (value as VueConstructor).component.name != null
+    value
+    && (value as VueConstructor).component
+    && (value as VueConstructor).component.name != null
   );
 }
 
@@ -21,11 +21,12 @@ const components = Object.keys(All).reduce<{ [index: string]: VueConstructor }>(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const val = (All as any)[key];
     if (isComponent(val)) {
+      // eslint-disable-next-line no-param-reassign
       object[key] = val;
     }
     return object;
   },
-  {}
+  {},
 );
 
 describe('Mount Quasar', () => {
@@ -33,7 +34,7 @@ describe('Mount Quasar', () => {
   localVue.use(Quasar, { components }); // , lang: langEn
 
   const wrapper = mount(QBtnDemo, { localVue });
-  const vm = wrapper.vm;
+  const { vm } = wrapper;
 
   it('passes the sanity check and creates a wrapper', () => {
     expect(wrapper.isVueInstance()).toBe(true);

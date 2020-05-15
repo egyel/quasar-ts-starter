@@ -7,12 +7,10 @@ const localVue = createLocalVue();
 localVue.use(Quasar, { components: { QBtn } }); // <= you should register every component you use. If not declared here, `shallowMount` won't be able to stub them
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const factory = (propsData: any = {}) => {
-  return shallowMount(QBtnDemo, { // <= used `shallowMount` instead of `mount`, will stub all **registered** components into the template
-    localVue,
-    propsData,
-  });
-};
+const factory = (propsData: any = {}) => shallowMount(QBtnDemo, { // <= used `shallowMount` instead of `mount`, will stub all **registered** components into the template
+  localVue,
+  propsData,
+});
 
 describe('QBtnDemo', () => {
   test('is a Vue instance', () => {

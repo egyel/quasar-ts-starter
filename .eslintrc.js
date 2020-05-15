@@ -86,6 +86,9 @@ module.exports = {
     // 'vue-i18n/no-unused-keys': ['error', {extensions: ['.js','.ts','.vue']}],
     // 'vue-i18n/no-missing-keys': 'error',
 
+    // warn instead error:
+    'max-len': ['warn'],
+
     // allow console.log during development only
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     // allow debugger during development only

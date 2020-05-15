@@ -3,16 +3,14 @@ import { createLocalVue, shallowMount } from '@vue/test-utils';
 import { Cookies, Quasar, QuasarPluginOptions } from 'quasar';
 import Vue, { ComponentOptions } from 'vue';
 
-const mockSsrContext = () => {
-  return {
-    req: {
-      headers: {},
-    },
-    res: {
-      setHeader: () => undefined,
-    },
-  };
-};
+const mockSsrContext = () => ({
+  req: {
+    headers: {},
+  },
+  res: {
+    setHeader: () => undefined,
+  },
+});
 
 // https://eddyerburgh.me/mock-vuex-in-vue-unit-tests
 // TODO: add typings
@@ -50,7 +48,7 @@ export const mountQuasar = <V extends Vue>(
 
     if (options.cookies) {
       const cookieStorage = ssrContext ? Cookies.parseSSR(ssrContext) : Cookies;
-      const cookies = options.cookies;
+      const { cookies } = options;
       Object.keys(cookies).forEach((key) => {
         cookieStorage.set(key, cookies[key]);
       });
@@ -83,7 +81,9 @@ export const mountQuasar = <V extends Vue>(
     localVue,
     // store,
     // router,
-    mocks: { $t, $tc, $n, $d },
+    mocks: {
+      $t, $tc, $n, $d,
+    },
     // Injections for Components with a QPage root Element
     provide: {
       pageContainer: true,
