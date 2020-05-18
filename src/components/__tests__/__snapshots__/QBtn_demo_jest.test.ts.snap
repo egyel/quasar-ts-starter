@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BtnTest renders correctly 1`] = `
+<div>
+  <p
+    class="textContent"
+  >
+    rocket muffin
+  </p>
+   
+  <span>
+    0
+  </span>
+   
+  <q-btn-stub
+    align="center"
+    color="primary"
+    icon="check"
+    id="mybutton"
+    label="OK"
+    ripple="true"
+  />
+</div>
+`;
