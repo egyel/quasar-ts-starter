@@ -78,7 +78,15 @@
       "boot/*": ["src/boot/*"],
       // addition paths
       "store/*": ["src/store/*"]
-    }
+    },
+
+    // TODO: this should actually work out-of-the-box the same option
+    //  is provided into tsconfig-preset, but "vue-jest"
+    //  doesn't process inherited tsconfig due to its usage of a very old package.
+    // Every should be solved when "vue-jest" v4 (which will use "ts-jest") will be released.
+    // See: https://github.com/vuejs/vue-jest/issues/144#issuecomment-621290457
+    "esModuleInterop": true,
+    "types": ["quasar", "jest"]
   }
   // "exclude": ["/dist", ".quasar", "node_modules"]   /*quasar*/
 }
