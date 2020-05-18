@@ -1371,6 +1371,15 @@
     ts-jest "^25.4.0"
     vue-jest "^3.0.4"
 
+"@quasar/quasar-app-extension-testing@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@quasar/quasar-app-extension-testing/-/quasar-app-extension-testing-1.0.0.tgz#fc1aefcbed3aed0384ccae3daaf7437c2dd6d425"
+  integrity sha512-IuHseh5YIaf4JPlsjehkB2pLUaWuFMsAxFq83+06btO9dMSQpvBXrGhA6O0N1rXUM/EXBI8Mi7pwJWi+78i4LA==
+  dependencies:
+    chalk "^2.4.2"
+    execa "^1.0.0"
+    strip-ansi "^5.0.0"
+
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
